@@ -24,6 +24,7 @@ local config = function()
 			"dockerfile",
 			"gitignore",
 			"python",
+			"tsx",
 		},
 		auto_install = true,
 		highlight = {
