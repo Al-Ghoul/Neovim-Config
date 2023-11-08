@@ -6,6 +6,7 @@ return {
 		local lspkind = require("lspkind")
 
 		require("luasnip/loaders/from_vscode").lazy_load()
+		luasnip.config.setup({})
 
 		vim.opt.completeopt = "menu,menuone,noselect"
 
@@ -42,13 +43,14 @@ return {
 	end,
 	dependencies = {
 		"onsails/lspkind.nvim",
+		"saadparwaiz1/cmp_luasnip",
 		{
 
 			"L3MON4D3/LuaSnip",
 			-- follow latest release.
-			version = "2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-			-- install jsregexp (optional!).
+			version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
 			build = "make install_jsregexp",
+			dependencies = { "rafamadriz/friendly-snippets" },
 		},
 	},
 }
