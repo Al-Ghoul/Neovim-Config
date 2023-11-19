@@ -19,15 +19,11 @@ mapkey("<C-h>", "wincmd h", "t") -- Navigate Left
 mapkey("<C-j>", "wincmd j", "t") -- Navigate Down
 mapkey("<C-k>", "wincmd k", "t") -- Navigate Up
 mapkey("<C-l>", "wincmd l", "t") -- Navigate Right
-mapkey("<C-h>", "TmuxNavigateLeft", "n") -- Navigate Left
-mapkey("<C-j>", "TmuxNavigateDown", "n") -- Navigate Down
-mapkey("<C-k>", "TmuxNavigateUp", "n") -- Navigate Up
-mapkey("<C-l>", "TmuxNavigateRight", "n") -- Navigate Right
 
 -- Window Management
 mapkey("<leader>sv", "vsplit", "n") -- Split Vertically
 mapkey("<leader>sh", "split", "n") -- Split Horizontally
-mapkey("<leader>g", ":LazyGit<CR>", "n") -- Split Horizontally
+mapkey("<leader>g", ":LazyGit<CR>", "n") -- Opens LazyGit
 
 -- Indenting
 mapkey("<", "v", "<gv") -- Shift Indentation to Left
@@ -44,7 +40,3 @@ api.nvim_set_keymap("v", "<leader>zn", ":'<,'>TZNarrow<CR>", {})
 api.nvim_set_keymap("n", "<leader>sm", ":TZFocus<CR>", {})
 api.nvim_set_keymap("n", "<leader>zm", ":TZMinimalist<CR>", {})
 api.nvim_set_keymap("n", "<leader>za", ":TZAtaraxis<CR>", {})
-
--- Comments
-api.nvim_set_keymap("n", "<C-_>", "gtc", { noremap = false })
-api.nvim_set_keymap("v", "<C-_>", "goc", { noremap = false })
