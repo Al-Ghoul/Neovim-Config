@@ -91,7 +91,7 @@ The following keys are bound to some windows management actions
 | :--------------: | ----------------------------------------------------------------------------------------------------------- | ----- |
 | &lt;leader&gt;sv | Split Vertically                                                                                            | :x:   |
 | &lt;leader&gt;sh | Split Horizontally                                                                                          | :x:   |
-| &lt;leader&gt;g  | Opens up [LazyGit](https://github.com/jesseduffield/lazygit/blob/master/docs/keybindings/Keybindings_en.md) | :x:   |
+| &lt;leader&gt;lg | Opens up [LazyGit](https://github.com/jesseduffield/lazygit/blob/master/docs/keybindings/Keybindings_en.md) | :x:   |
 
 ## Code Actions
 

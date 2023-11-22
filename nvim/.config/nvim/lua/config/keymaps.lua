@@ -23,7 +23,7 @@ mapkey("<C-l>", "wincmd l", "t") -- Navigate Right
 -- Window Management
 mapkey("<leader>sv", "vsplit", "n") -- Split Vertically
 mapkey("<leader>sh", "split", "n") -- Split Horizontally
-mapkey("<leader>g", ":LazyGit<CR>", "n") -- Opens LazyGit
+mapkey("<leader>lg", ":LazyGit<CR>", "n") -- Opens LazyGit
 
 -- Indenting
 mapkey("<", "v", "<gv") -- Shift Indentation to Left
