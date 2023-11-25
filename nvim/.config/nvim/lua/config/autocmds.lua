@@ -12,3 +12,11 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 		vim.lsp.buf.format({ name = "efm", async = true })
 	end,
 })
+
+vim.api.nvim_create_autocmd({ "InsertEnter" }, {
+	group = vim.api.nvim_create_augroup("NotifyClearGrp", {}),
+	pattern = "*",
+	callback = function()
+		require("notify").dismiss({ silent = true })
+	end,
+})
