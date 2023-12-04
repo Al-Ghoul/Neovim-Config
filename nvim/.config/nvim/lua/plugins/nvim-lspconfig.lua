@@ -34,6 +34,19 @@ local config = function()
 		},
 	})
 
+	-- tailwindcss
+	lspconfig.tailwindcss.setup({})
+
+	-- c/c++
+	lspconfig.clangd.setup({
+		on_attach = on_attach,
+		capabilities = cmp_nvim_lsp.default_capabilities(),
+		cmd = {
+			"clangd",
+			"--offset-encoding=utf-16",
+		},
+	})
+
 	-- json
 	lspconfig.jsonls.setup({
 		capabilities = capabilities,
@@ -99,6 +112,9 @@ local config = function()
 		on_attach = on_attach,
 	})
 
+-- formatter/linters & more 
+-- https://github.com/creativenull/efmls-configs-nvim/blob/main/doc/SUPPORTED_LIST.md
+    
 	local luacheck = require("efmls-configs.linters.luacheck")
 	local stylua = require("efmls-configs.formatters.stylua")
 	local flake8 = require("efmls-configs.linters.flake8")
@@ -110,6 +126,7 @@ local config = function()
 	local shfmt = require("efmls-configs.formatters.shfmt")
 	local hadolint = require("efmls-configs.linters.hadolint")
 	local solhint = require("efmls-configs.linters.solhint")
+	local clang_format = require("efmls-configs.formatters.clang_format")
 
 	-- configure efm server
 	lspconfig.efm.setup({
@@ -127,6 +144,7 @@ local config = function()
 			"docker",
 			"html",
 			"css",
+			"cpp",
 		},
 		init_options = {
 			documentFormatting = true,
@@ -154,6 +172,7 @@ local config = function()
 				solidity = { solhint },
 				html = { prettierd },
 				css = { prettierd },
+				cpp = { clang_format },
 			},
 		},
 	})
